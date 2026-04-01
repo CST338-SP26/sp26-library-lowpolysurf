@@ -6,18 +6,18 @@ import java.util.Objects;
 public class Reader{
 
     //data
-    private int cardNumber;
-    private String name;
-    private String phone;
-    private int bookCount;
-    private int bookStart = 4;
+    private int CARD_NUMBER_;
+    private String NAME_;
+    private String PHONE_;
+    private int BOOK_COUNT_;
+    private int BOOK_START_ = 4;
     private ArrayList<Book> books;
 
     //constructor
-    public Reader(int cardNumber, String name, String phone) {
-        this.cardNumber = cardNumber;
-        this.name = name;
-        this.phone = phone;
+    public Reader(int CARD_NUMBER_, String NAME_, String PHONE_) {
+        this.CARD_NUMBER_ = CARD_NUMBER_;
+        this.NAME_ = NAME_;
+        this.PHONE_ = PHONE_;
         this.books = new ArrayList<>();
     }
 
@@ -46,12 +46,12 @@ public class Reader{
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Reader reader = (Reader) o;
-        return cardNumber == reader.cardNumber && bookCount == reader.bookCount && bookStart == reader.bookStart && Objects.equals(name, reader.name) && Objects.equals(phone, reader.phone);
+        return CARD_NUMBER_ == reader.CARD_NUMBER_ && BOOK_COUNT_ == reader.BOOK_COUNT_ && BOOK_START_ == reader.BOOK_START_ && Objects.equals(NAME_, reader.NAME_) && Objects.equals(PHONE_, reader.PHONE_);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cardNumber, name, phone, bookCount, bookStart);
+        return Objects.hash(CARD_NUMBER_, NAME_, PHONE_, BOOK_COUNT_, BOOK_START_);
     }
 
     @Override
@@ -61,6 +61,6 @@ public class Reader{
         for(int i =1; i < books.size(); i++){
             out.append(", ").append(books.get(i).toString());
         }
-        return name + " (#" + cardNumber + ") has checked out {" + out + "}";
+        return NAME_ + " (#" + CARD_NUMBER_ + ") has checked out {" + out + "}";
     }
 }
