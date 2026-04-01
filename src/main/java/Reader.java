@@ -1,6 +1,7 @@
 import Utilities.Code;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Reader{
@@ -11,7 +12,7 @@ public class Reader{
     private String PHONE_;
     private int BOOK_COUNT_;
     private int BOOK_START_ = 4;
-    private ArrayList<Book> books;
+    private List<Book> books;
 
     //constructor
     public Reader(int CARD_NUMBER_, String NAME_, String PHONE_) {
@@ -63,11 +64,11 @@ public class Reader{
         this.BOOK_START_ = BOOK_START_;
     }
 
-    public ArrayList<Book> getBooks() {
+    public List<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(ArrayList<Book> books) {
+    public void setBooks(List<Book> books) {
         this.books = books;
     }
 
